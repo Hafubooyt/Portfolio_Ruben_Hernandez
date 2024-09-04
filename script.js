@@ -90,71 +90,25 @@ window.onscroll = function(){
 
         // Spotify //
 
-        document.addEventListener("DOMContentLoaded", function() {
-            // Crear el contenedor del reproductor
-            const container = document.getElementById('spotify-player-container');
-            
-            // Configuración del iframe
-            const iframe = document.createElement('iframe');
-            iframe.style.borderRadius = '12px';
-            iframe.src = 'https://open.spotify.com/embed/playlist/1qRpBJHkpwN5pevXlZYz4e?utm_source=generator&theme=0';
-            iframe.width = '300';
-            iframe.height = '152';
-            iframe.frameBorder = '0';
-            iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-            iframe.loading = 'lazy';
-            
-            // Configuración del enlace
-            const link = document.createElement('a');
-            link.href = 'https://open.spotify.com/playlist/1qRpBJHkpwN5pevXlZYz4e?si=0d27d81773eb447d';
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = 'Escucha mi playlist';
-            link.style.display = 'inline-block';
-            link.style.marginTop = '10px';
-            link.style.fontSize = '14px';
-            link.style.color = '#fff';
-            link.style.backgroundColor = 'rgba(38, 169, 221, 0.8)';
-            link.style.padding = '5px';
-            link.style.borderRadius = '8px';
-            link.style.textDecoration = 'none';
-            
-            // Crear el contenedor para el iframe y el enlace
-            const playerDiv = document.createElement('div');
-            playerDiv.id = 'spotify-player';
-            playerDiv.style.position = 'absolute';
-            playerDiv.style.top = '50px'; // Ajuste para que aparezca justo debajo del botón
-            playerDiv.style.right = '0';
-            playerDiv.style.width = '300px';
-            playerDiv.style.zIndex = '1000';
-            playerDiv.style.textAlign = 'center';
-            playerDiv.style.padding = '10px';
-            playerDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-            playerDiv.style.borderRadius = '12px';
-            playerDiv.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
-            playerDiv.style.overflow = 'hidden';
-            playerDiv.style.display = 'none'; // Inicialmente oculto
-            
-            // Agregar iframe y enlace al contenedor
-            playerDiv.appendChild(iframe);
-            playerDiv.appendChild(link);
-            container.appendChild(playerDiv);
-            
-            // Configuración del botón de abrir/ocultar
-            const toggleButton = document.getElementById('toggle-player');
-            let isVisible = false;
-            
-            toggleButton.addEventListener('click', function() {
-                if (isVisible) {
-                    playerDiv.style.display = 'none';
-                    toggleButton.textContent = 'Mostrar reproductor';
-                } else {
-                    playerDiv.style.display = 'block';
-                    toggleButton.textContent = 'Ocultar reproductor';
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBubble = document.getElementById('toggle-bubble');
+            const spotifyPlayer = document.getElementById('spotify-player');
+            const closePlayer = document.getElementById('close-player');
+        
+            toggleBubble.addEventListener('click', function() {
+                if (spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '') {
+                    spotifyPlayer.style.display = 'block';
+                    toggleBubble.style.display = 'none'; // Oculta el botón cuando se muestra el reproductor
                 }
-                isVisible = !isVisible;
+            });
+        
+            closePlayer.addEventListener('click', function() {
+                spotifyPlayer.style.display = 'none';
+                toggleBubble.style.display = 'block'; // Muestra el botón cuando se oculta el reproductor
             });
         });
+        
+        
         
 
         

@@ -696,55 +696,78 @@ footer .arriba{
 }
 
 /* Spoty nuevo */
-#toggle-player {
+.floating-bubble {
     position: fixed;
-    top: 10px;
+    top: 60px; /* Ajusta según el espacio debajo del header */
     right: 10px;
-    width: 150px;
-    height: 30px;
-    font-size: 14px;
+    z-index: 1000;
+}
+
+.toggle-bubble {
     background-color: #229beb;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
     cursor: pointer;
-    text-align: center;
-    line-height: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    z-index: 1000;
 }
 
-#toggle-player:hover {
-    background-color: #1c4cd1;
+.toggle-bubble:hover {
+    background-color: #134794;
 }
 
-/* Estilo para el contenedor del reproductor */
-#spotify-player {
-    position: absolute;
-    top: 50px; /* Ajuste para que esté debajo del botón */
-    right: 0;
-    width: 300px;
-    z-index: 1000;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+.spotify-player {
+    display: none; /* Inicialmente oculto */
+    position: relative; /* Para posicionar el botón de cerrar */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para el enlace en el reproductor */
-#spotify-player a {
-    display: inline-block;
+.spotify-player iframe {
+    width: 300px; /* Ajusta según el tamaño deseado */
+    height: 380px;
+}
+
+.player-link {
+    display: block;
     margin-top: 10px;
-    font-size: 14px;
     color: #fff;
-    background-color: rgba(38, 169, 221, 0.8);
+    text-decoration: none;
+    background-color: #229beb;
     padding: 5px;
     border-radius: 8px;
-    text-decoration: none;
+    text-align: center;
+}
+
+/* Estilo para el botón de cerrar */
+.close-player {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF3B30;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.close-player:hover {
+    background-color: #FF2D1A;
 }
 
 /* SECCION RESPONSIVE */

@@ -420,10 +420,17 @@
         </div>
     </footer>
 
-    <!-- Botón para abrir/ocultar el reproductor -->
-    <button id="toggle-player">Mostrar reproductor</button>
-    <!-- Contenedor del reproductor -->
-    <div id="spotify-player-container"></div>
+    <!-- Botón para abrir/ocultar el reproductor burbuja-->
+    <div id="floating-bubble" class="floating-bubble">
+        <button id="toggle-bubble" class="toggle-bubble">🎵</button>
+        <div id="spotify-player" class="spotify-player">
+            <button id="close-player" class="close-player">✖</button>
+            <iframe src="https://open.spotify.com/embed/playlist/1qRpBJHkpwN5pevXlZYz4e?utm_source=generator&theme=0" 
+                    width="300" height="380" frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <a href="https://open.spotify.com/playlist/1qRpBJHkpwN5pevXlZYz4e" target="_blank" class="player-link">Escucha mi playlist</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
