@@ -47,7 +47,7 @@ window.onscroll = function(){
 
             // Cambia el color según la posición del scroll
             if (scrollPosition > 4880) { // Cambia 100 por la cantidad de píxeles que desees
-                logoLink.style.color = '#FF5733'; // Color cuando se ha desplazado
+                logoLink.style.color = '#229beb'; // Color cuando se ha desplazado
             } else if (scrollPosition > 4230){
                 logoLink.style.color = '#86106db0'
             } else if (scrollPosition > 2190){
