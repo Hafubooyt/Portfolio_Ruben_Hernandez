@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Ruben Hernández</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Avatar.jpg" alt="">
+            </div>
+            <h1>Ruben Hernández</h1>
+            <h2>Workforce Reporting Analyst | Business Administration Student | Web Development | Front-end Jr | HTML5 | CSS3 | JS | UX/UI Design | Git & GitHub</h2>
+            <div class="redes">
+                                            <!-- Notas detalles importantes -->
+                <!-- el uso de "fa-brands fa-facebook-f" nos sirve para usar un repositorio de iconos para no descargar las imagenes y hacer menos pesada la pagina -->
+                <!-- en el fa tenemos 2 opciones 1 es el brands que es para marcas comerciales y el solid que es para iconos solidos, para este debemos saber el nombre del icono -->
+                <!-- el <a href="#" nos ayuda a poner el link al que queremos que se redireccione, en este caso se reemplaza el # por el link conservando las comillas -->
+                <!-- el target="_blank" ayuda a que el enlace se abra en una nueva pestaña y rel="noopener noreferrer" Evita que la nueva pestaña acceda a información de la pestaña actual y que se envíe información sobre la página de origen, mejorando la seguridad y privacidad -->
+                <a href="https://www.linkedin.com/in/ruben-hernandez-03898613b/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Hafubooyt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/hafuboogameryt/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://discord.gg/U7rqA8q6du" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@HafubooLive" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola👋🏻, soy Ruben Hernández. 😎</span> 💼 Soy un Analista de Reportes de Workforce con 3 años de experiencia, especializado en el monitoreo de agentes en tiempo real y asegurando que se cumplan los KPIs 📊. Desarrollo y automatizo informes sobre métricas clave como AHT, adherencia, niveles de servicio y desempeño de agentes, usando Excel, SQL y Power BI para visualización y toma de decisiones.
+                💻 Además, estoy ampliando mis habilidades en Desarrollo Frontend, creando interfaces responsivas con HTML, CSS, JavaScript y explorando React ⚛️. También aplico principios de UX/UI en mis proyectos.
+                🎯 Certificaciones en Marketing Digital y Google Ads me permiten combinar lo técnico con una visión estratégica.
+                🎮 Intereses: videojuegos 🎶, música, viajes ✈️, diseño, programación ⚽, fútbol, motos 🏍️, animales🐾 y fotografía 📷.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            27-02-1998 🎂
+                        </li>
+                        <!-- pendiente por actualizar <li>
+                            <strong>Teléfono</strong>
+                            2555 5454545
+                        </li> -->
+                        <li>
+                            <strong>Email</strong>
+                            ruben.hafuboo.contacto@gmail.com ✉️
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            https://github.com/Hafubooyt
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Bogotá, Colombia 🇨🇴
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-computer"></i>
+                            <span>DEVELOP</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-soccer-ball"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>MOTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-paw"></i>
+                            <span>ANIMALES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button id="download-btn">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>38%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>51%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Wordpress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill"> 
+                        <span>Excel</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Gestor Administrativo, Administración y gestión de empresas</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2016 - 2018</span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Administración de empresas</h4>
+                        <span class="casa">Institución Universitaria Politécnico Grancolombiano</span>
+                        <span class="fecha"></span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrollador Front-End</h4>
+                        <span class="casa">Oracle y Alura Latam</span>
+                        <span class="fecha">En progreso</span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Fundamentos de Marketing Digital</h4>
+                        <span class="casa">Google Actívate</span>
+                        <span class="fecha">2023</span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Google Ads 2023 (Adwords)</h4>
+                        <span class="casa">Udemy</span>
+                        <span class="fecha">2023</span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>EF SET English Certificate 56/100 (B2 Upper Intermediate)</h4>
+                        <span class="casa">EF Standard English Test (EF SET) </span>
+                        <span class="fecha"></span>
+                        <p></p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Workforce Reporting Analyst</h4>
+                        <span class="casa">IGT Solutions</span>
+                        <span class="fecha">2021 - presente</span>
+                        <p>Como Reporting Analyst en Workforce Management (WFM), lidero la creación de reportes estratégicos para mejorar la eficiencia operativa y la gestión de recursos humanos. Desarrollo dashboards interactivos y analizo datos clave sobre planificación de demanda, asignación de personal y adherencia a horarios. Identifico patrones para optimizar la productividad y me mantengo actualizado con las últimas tendencias en WFM.
+                           En mi rol anterior como Workforce Real Time Analyst, monitoreaba el estado de trabajo de los agentes en tiempo real, asegurando niveles óptimos de personal y servicio. Aprobaba actividades discrecionales para maximizar la ocupación y gestionaba el aumento de personal en situaciones de alta demanda. Comunicaba riesgos operativos y problemas del sistema a la dirección y al equipo de tecnología, y realizaba el seguimiento de la adherencia a los horarios.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Agente del servicio de atención al cliente</h4>
+                        <span class="casa">Teleperformance Colombia</span>
+                        <span class="fecha">2019 - 2020</span>
+                        <p>Tengo experiencia en servicio al cliente en el sector turístico, especializado en la gestión de vuelos y venta de boletos. Utilizo el sistema Amadeus para reservar y modificar itinerarios, asegurando un servicio rápido y eficiente. También brindo asesoramiento personalizado sobre vuelos, políticas de equipaje y tarifas, y manejo situaciones como cancelaciones y retrasos para ofrecer una experiencia satisfactoria a los viajeros.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Asistente administrativo ejecutivo</h4>
+                        <span class="casa">Ecopetrol</span>
+                        <span class="fecha">2017 - 2018</span>
+                        <p>Trabajé como Asistente Administrativo en el departamento de Recursos Humanos de la Universidad Ecopetrol, donde me encargué de la limpieza y optimización de bases de datos en Excel, asegurando precisión y eficiencia en la gestión de registros de empleados. Analicé y revisé empleados pendientes de formación, coordiné horarios y realicé seguimientos para garantizar la finalización a tiempo de los programas de capacitación.
+
+                            Además, redacté y procesé documentos oficiales, respondí correos electrónicos, y apoyé en la organización de reuniones y eventos. Mantuve registros organizados, manejé información confidencial y apoyé al equipo de RRHH en el seguimiento del desempeño y cumplimiento de requisitos de capacitación. Mi atención al detalle y habilidades organizativas, junto con mi dominio de Excel, me permitieron optimizar procesos y contribuir al funcionamiento eficiente del departamento.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <a href="https://hafubooyt.github.io/EncriptadorONE/" target="_blank" class="proyecto">
+                    <img src="img/Encriptadorimg.png" alt="">
+                    <div class="overlay">
+                        <h3>EncriptadorONE</h3>
+                        <p>Programación</p>
+                    </div>
+                </a>
+                <a href="#"> <!-- pegar -- target="_blank" class="proyecto" despues del "" cuando haya link -->
+                    <img src="img/Paginaweb.png" alt="">
+                    <div class="overlay">
+                        <h3>Pagina web personal</h3>
+                        <p>Desarrollo frondend</p>
+                    </div>
+                </a>
+                <a href="https://github.com/Hafubooyt?tab=repositories" target="_blank" class="proyecto">
+                    <img src="img/reposit.gif" alt="">
+                    <div class="overlay">
+                        <h3>Repositorios</h3>
+                        <p>GitHub</p>
+                    </div>
+                </a>
+                <a href="#"> <!-- pegar -- target="_blank" class="proyecto" despues del "" cuando haya link -->
+                    <img src="img/comingsoon.gif" alt="">
+                    <div class="overlay">
+                        <h3>Coming</h3>
+                        <p>Soon</p>
+                    </div>
+                </a>
+                <a href="#"> <!-- pegar -- target="_blank" class="proyecto" despues del "" cuando haya link -->
+                    <img src="img/comingsoon.gif" alt="">
+                    <div class="overlay">
+                        <h3>Coming</h3>
+                        <p>Soon</p>
+                    </div>
+                </a>
+                <a href="#"> <!-- pegar -- target="_blank" class="proyecto" despues del "" cuando haya link -->
+                    <img src="img/comingsoon.gif" alt="">
+                    <div class="overlay">
+                        <h3>Coming</h3>
+                        <p>Soon</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Enlace de correo -->
+                <a id="enviar-correo" href="mailto:ruben.hafuboo.contacto@gmail.com" class="correo">
+                    <img src="img/gmail-icon-23.png" alt="Logo de Gmail" class="gmail-logo">
+                    <span>Envíame un correo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+        <a href="https://www.linkedin.com/in/ruben-hernandez-03898613b/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/Hafubooyt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/hafuboogameryt/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://discord.gg/U7rqA8q6du" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.youtube.com/@HafubooLive" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
