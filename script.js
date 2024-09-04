@@ -88,6 +88,69 @@ window.onscroll = function(){
         window.open(this.href, '_blank'); // Abrir el enlace en una nueva pestaña
         });
 
-
+        // Spotify //
+        document.addEventListener("DOMContentLoaded", function() {
+            // Crear el contenedor del reproductor
+            const container = document.getElementById('spotify-player-container');
+            
+            // Configuración del iframe
+            const iframe = document.createElement('iframe');
+            iframe.style.borderRadius = '12px';
+            iframe.src = 'https://open.spotify.com/embed/playlist/1qRpBJHkpwN5pevXlZYz4e?utm_source=generator&theme=0';
+            iframe.width = '300';
+            iframe.height = '152';
+            iframe.frameBorder = '0';
+            iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+            iframe.loading = 'lazy';
+            
+            // Configuración del enlace
+            const link = document.createElement('a');
+            link.href = 'https://open.spotify.com/playlist/1qRpBJHkpwN5pevXlZYz4e?si=4340b6a05f094da3';
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = 'Escucha mi playlist';
+            link.style.display = 'inline-block';
+            link.style.marginTop = '10px';
+            link.style.fontSize = '14px';
+            link.style.color = '#fff';
+            link.style.backgroundColor = 'rgba(29, 185, 84, 0.8)';
+            link.style.padding = '5px';
+            link.style.borderRadius = '8px';
+            link.style.textDecoration = 'none';
+            
+            // Crear el contenedor para el iframe y el enlace
+            const playerDiv = document.createElement('div');
+            playerDiv.style.position = 'fixed';
+            playerDiv.style.top = '0';
+            playerDiv.style.right = '0';
+            playerDiv.style.width = '300px';
+            playerDiv.style.zIndex = '1000';
+            playerDiv.style.textAlign = 'center';
+            playerDiv.style.padding = '10px';
+            playerDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            playerDiv.style.borderRadius = '12px';
+            
+            // Agregar iframe y enlace al contenedor
+            playerDiv.appendChild(iframe);
+            playerDiv.appendChild(link);
+            
+            // Agregar el contenedor al cuerpo del documento
+            container.appendChild(playerDiv);
+            
+            // Configuración del botón de ocultar/mostrar
+            const toggleButton = document.getElementById('toggle-player');
+            let isVisible = true;
+    
+            toggleButton.addEventListener('click', function() {
+             if (isVisible) {
+            playerDiv.style.display = 'none';
+            toggleButton.textContent = 'Mostrar Reproductor';
+             } else {
+            playerDiv.style.display = 'block';
+            toggleButton.textContent = 'Ocultar Reproductor';
+             }
+                isVisible = !isVisible;
+             });
+        });
 
         
