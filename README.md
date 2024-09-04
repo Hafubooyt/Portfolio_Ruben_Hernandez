@@ -30,4 +30,12 @@ El proyecto está compuesto por los siguientes archivos:
 - 
 ## Update Funcionalidad del Reproductor de Spotify
 
-Se ha implementado una funcionalidad con JavaScript para gestionar la visibilidad del reproductor de Spotify. El reproductor puede ser mostrado u ocultado con un botón que siempre está visible en la parte superior derecha de la página. Cuando el reproductor está oculto, el botón muestra el texto "Mostrar reproductor". Cuando el reproductor está visible, el botón cambia a "Ocultar reproductor". 
+### 3. **Reproductor de Spotify**
+   - **Funcionalidad Principal:**
+     - Incluye un reproductor de Spotify que se muestra en una burbuja flotante.
+   - **Características:**
+     - **Burbuja Flotante**: El reproductor aparece como una burbuja en la parte superior derecha de la página, debajo del encabezado.
+     - **Mostrar/Ocultar**: Un botón en la parte superior derecha de la página permite mostrar u ocultar el reproductor. El reproductor se oculta al hacer clic en el botón de cerrar y se muestra nuevamente al hacer clic en el botón de abrir.
+     - **Estilo de Burbuja**: La burbuja flotante sigue el estilo de Messenger, con una interfaz visualmente atractiva y funcional.
+   - **Control de Visibilidad**: 
+     - Al cerrar el reproductor, el botón de abrir aparece en la parte superior derecha, y al abrir el reproductor, el botón de abrir se oculta mientras el reproductor está visible.
