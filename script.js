@@ -89,6 +89,7 @@ window.onscroll = function(){
         });
 
         // Spotify //
+
         document.addEventListener("DOMContentLoaded", function() {
             // Crear el contenedor del reproductor
             const container = document.getElementById('spotify-player-container');
@@ -105,7 +106,7 @@ window.onscroll = function(){
             
             // Configuración del enlace
             const link = document.createElement('a');
-            link.href = 'https://open.spotify.com/playlist/1qRpBJHkpwN5pevXlZYz4e?si=4340b6a05f094da3';
+            link.href = 'https://open.spotify.com/playlist/1qRpBJHkpwN5pevXlZYz4e?si=0d27d81773eb447d';
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.textContent = 'Escucha mi playlist';
@@ -113,15 +114,16 @@ window.onscroll = function(){
             link.style.marginTop = '10px';
             link.style.fontSize = '14px';
             link.style.color = '#fff';
-            link.style.backgroundColor = 'rgba(29, 185, 84, 0.8)';
+            link.style.backgroundColor = 'rgba(38, 169, 221, 0.8)';
             link.style.padding = '5px';
             link.style.borderRadius = '8px';
             link.style.textDecoration = 'none';
             
             // Crear el contenedor para el iframe y el enlace
             const playerDiv = document.createElement('div');
-            playerDiv.style.position = 'fixed';
-            playerDiv.style.top = '0';
+            playerDiv.id = 'spotify-player';
+            playerDiv.style.position = 'absolute';
+            playerDiv.style.top = '50px'; // Ajuste para que aparezca justo debajo del botón
             playerDiv.style.right = '0';
             playerDiv.style.width = '300px';
             playerDiv.style.zIndex = '1000';
@@ -129,28 +131,35 @@ window.onscroll = function(){
             playerDiv.style.padding = '10px';
             playerDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
             playerDiv.style.borderRadius = '12px';
+            playerDiv.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
+            playerDiv.style.overflow = 'hidden';
+            playerDiv.style.display = 'none'; // Inicialmente oculto
             
             // Agregar iframe y enlace al contenedor
             playerDiv.appendChild(iframe);
             playerDiv.appendChild(link);
-            
-            // Agregar el contenedor al cuerpo del documento
             container.appendChild(playerDiv);
             
-            // Configuración del botón de ocultar/mostrar
+            // Configuración del botón de abrir/ocultar
             const toggleButton = document.getElementById('toggle-player');
-            let isVisible = true;
-    
+            let isVisible = false;
+            
             toggleButton.addEventListener('click', function() {
-             if (isVisible) {
-            playerDiv.style.display = 'none';
-            toggleButton.textContent = 'Mostrar Reproductor';
-             } else {
-            playerDiv.style.display = 'block';
-            toggleButton.textContent = 'Ocultar Reproductor';
-             }
+                if (isVisible) {
+                    playerDiv.style.display = 'none';
+                    toggleButton.textContent = 'Mostrar reproductor';
+                } else {
+                    playerDiv.style.display = 'block';
+                    toggleButton.textContent = 'Ocultar reproductor';
+                }
                 isVisible = !isVisible;
-             });
+            });
         });
+        
+
+        
+        
+        
+        
 
         
