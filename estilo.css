@@ -769,7 +769,6 @@ footer .arriba{
 .close-player:hover {
     background-color: #FF2D1A;
 }
-
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{
