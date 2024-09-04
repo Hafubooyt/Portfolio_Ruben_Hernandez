@@ -27,3 +27,7 @@ El proyecto está compuesto por los siguientes archivos:
 - **CSS3**: Estilos visuales para el diseño de la página.
 - **JavaScript**: (Opcional, si has implementado algún comportamiento dinámico).
 - **Git y GitHub**: Control de versiones y almacenamiento del código.
+- 
+## Update Funcionalidad del Reproductor de Spotify
+
+Se ha implementado una funcionalidad con JavaScript para gestionar la visibilidad del reproductor de Spotify. El reproductor puede ser mostrado u ocultado con un botón que siempre está visible en la parte superior derecha de la página. Cuando el reproductor está oculto, el botón muestra el texto "Mostrar reproductor". Cuando el reproductor está visible, el botón cambia a "Ocultar reproductor". 
