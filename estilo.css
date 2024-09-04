@@ -694,6 +694,41 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+/* Estilo para el reproductor de Spotify */
+.spotify-player {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Ajusta el ancho del reproductor */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    text-align: center; /* Centrar el texto */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Estilo del reproductor */
+.spotify-player iframe {
+    width: 100%;
+    height: 152px; /* Altura adecuada para mostrar controles */
+    border: none;
+}
+
+/* Estilo del enlace debajo del reproductor */
+.spotify-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(29, 185, 84, 0.8); /* Color verde semi-transparente */
+    padding: 5px;
+    border-radius: 8px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+.spotify-link:hover {
+    background-color: rgba(29, 185, 84, 1); /* Cambia el color al pasar el mouse */
+}
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{
