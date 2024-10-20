@@ -25,7 +25,7 @@ El proyecto está compuesto por los siguientes archivos:
 
 - **HTML5**: Estructura básica del sitio.
 - **CSS3**: Estilos visuales para el diseño de la página.
-- **JavaScript**: (Opcional, si has implementado algún comportamiento dinámico).
+- **JavaScript**: he implementado comportamientos dinámicos.
 - **Git y GitHub**: Control de versiones y almacenamiento del código.
 - 
 ## Update Funcionalidad del Reproductor de Spotify
